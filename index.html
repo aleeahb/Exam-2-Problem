@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Exam Problem #2</title>
+        <link rel="stylesheet" type="text/css" href="styles/Exam2problem.css" />
+        <link href="https://fonts.googleapis.com/css?family=Cookie|Dancing+Script|Jua|Lobster|Pacifico" rel="stylesheet">
+        <script src="js/Exam2problem.js"></script>
+    </head>
+    
+    <body>
+        <section id="title">
+        <h1>Exam Problem #2</h1>
+        <hr>
+            <select onchange="MenuChoice();"id="menu">
+                <option>Please select an option</option>
+                <option>Display Section 1</option>
+                <option>Display Section 2</option>
+                <option>Display Section 3</option>
+                <option>Display Section 4</option>
+                <option>Display Section 5</option>
+            </select>
+        <hr>
+        </section>
+        
+        <section id="section1" class="section1">
+        <button onclick="GetCatList();" id="catlist">Display the Category List </button>
+        <br>
+        <br>
+        <label id="catlistresult">The service will return the category ID, category name, and category description</label>
+        </section>
+        
+        <section id="section2" class="section2">
+            <button onclick="CreateCat();" id="createcat">Add a Product Category</button>
+            <br>
+            <br>
+            <label>Please enter the category name</label>
+            <input type="text" id="catname">
+            <br>
+            <label>Please enter the category description</label>
+            <input type="text" id="catdescription">
+            <br>
+            <label id="catstatus">The operation's result will display here.</label>
+        </section>
+        
+        <section id="section3" class="section3">
+            <button onclick="UpdateDesc();" id="newdesc">Change the description</button>
+            <br>
+            <br>
+            <label>Please enter the new description</label>
+            <input type="text" id="catdesc">
+            <br>
+            <label>Please enter the category ID</label>
+            <input type="text" id="catiddesc">
+            <br>
+            <label id="netcatstatus">The operation's result will display here.</label>
+        </section>
+        
+        <section id="section4" class="section4">
+            <button onclick="DeleteCategory();" id="delcatid">Delete the category</button>
+            <br>
+            <br>
+            <label>Please enter the category ID to delete:</label>
+            <input type="text" id="delcat">
+            <br>
+            <label id="delcatstatus">The operation's status will display here.</label>
+        </section>
+        
+        <section id="section5" class="section5">
+            <br>
+            <hr>
+            <p> About: </p>
+            <br>
+            <hr>
+            <p> Aleeah Betts </p>
+            <hr> aleeahb@uab.edu</hr>
+        </section>
