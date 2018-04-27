@@ -11,18 +11,14 @@ body {
 }
 .label {font-style: italic;}
 button {
-    background-color: #C71585; /* Green */
+    background-color: #C71585;
     border: none;
     color: white;
-    padding: 10px;
     text-align: center;
     display: inline-block;
-    float: right;
-    font-size: 15px;
-    margin: 4px 2px;
+    font-size: large;
     cursor: pointer;
-    font-family: 'Cookie', cursive;
-    border-radius: 50%;}
+    font-family: 'Cookie', cursive;}
 input {
     display: inline-block;
     float: right;

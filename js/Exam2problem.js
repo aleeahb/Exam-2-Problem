@@ -154,15 +154,15 @@ function UpdateDesc()
  objRequest.send(newcat2);
 
 }
-function OperationResult(output)
+function OperationResult(output1)
 {
- if (output.WasSuccessful == 1)
+ if (output1.WasSuccessful == 1)
  {
  document.getElementById("netcatstatus").innerHTML = "The operation was successful!"
  }
  else
  {
- document.getElementById("netcatstatus").innerHTML = "The operation was not successful!" + "<br>" + output.Exception;
+ document.getElementById("netcatstatus").innerHTML = "The operation was not successful!" + "<br>" + output1.Exception;
  }
 }
 
@@ -171,7 +171,7 @@ function DeleteCategory()
  var objRequest = new XMLHttpRequest();
  var url = "https://student.business.uab.edu/jsonwebservice/service1.svc/deleteCategory/";
  url += document.getElementById("delcat").value;
- 
+ alert("Are you sure that you want to delete this category?");
  objRequest.onreadystatechange = function()
  {
  if (objRequest.readyState == 4 && objRequest.status == 200)
@@ -186,7 +186,7 @@ function DeleteCategory()
  objRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
  objRequest.send();
 }
-function OperationResult(result)
+function GenerateResult(result)
 {
  if (result.DeleteCategoryResult.WasSuccessful == 1)
  {
@@ -194,8 +194,8 @@ function OperationResult(result)
  }
  else if (result.DeleteCategoryResult.WasSuccessful == 0)
  {
- document.getElementById("delcatstatus").innerHTML = "The operation was not successful!" + "<br>" + result4.Exception;
- }
+ document.getElementById("delcatstatus").innerHTML = "The operation was not successful!" + "<br>" + result.Exception;
+ }  
 }
 
  
